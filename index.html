@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="petals" id="petals"></div>
+
+<!-- ============ ENVELOPE INTRO ============ -->
+<div id="envelope-screen">
+  <div class="envelope-wrap">
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the envelope">
+      <div class="env-body"></div>
+      <div class="letter-peek"><span>for you</span></div>
+      <div class="env-shadow-fold"></div>
+      <div class="env-flap"></div>
+      <div class="seal">❤</div>
+    </div>
+    <div class="tap-hint" id="tap-hint">tap the envelope</div>
+    <button id="enter-btn">Open it up</button>
+  </div>
+</div>
+
+<!-- ============ MAIN APP ============ -->
+<div id="app">
+  <p class="site-title">a little something for you</p>
+
+  <nav class="tabs" id="tabs">
+    <button data-page="home" class="active">Home</button>
+    <button data-page="letter">My Letter</button>
+    <button data-page="reasons">Why I Love You</button>
+    <button data-page="music">Our Song</button>
+  </nav>
+
+  <!-- HOME -->
+  <section class="page active" id="page-home">
+    <div class="home-hero">
+      <h1 id="home-title">Happy Birthday</h1>
+      <p class="sub" id="home-sub">one more year of being wonderfully, completely you.</p>
+    </div>
+
+    <div class="polaroids">
+      <figure class="polaroid">
+        <div class="pin"></div>
+        <div class="photo-slot">add a favorite<br>photo of you two</div>
+        <figcaption>us :)</figcaption>
+      </figure>
+      <figure class="polaroid">
+        <div class="pin"></div>
+        <div class="photo-slot">add another<br>favorite photo</div>
+        <figcaption>this one too</figcaption>
+      </figure>
+    </div>
+
+    <p class="home-note">Every tab here has something waiting for you. Take your time — there's no rush today. It's yours.</p>
+  </section>
+
+  <!-- LETTER -->
+  <section class="page letter-page" id="page-letter">
+    <div class="paper-card">
+      <div class="washi tl"></div>
+      <div class="washi tr"></div>
+      <h2 class="letter-title">A letter, just for you</h2>
+      <div class="letter-body" id="letter-body">Loading...</div>
+      <div class="signature" id="letter-signature">— yours, always</div>
+    </div>
+  </section>
+
+  <!-- REASONS -->
+  <section class="page" id="page-reasons">
+    <h2 class="reasons-title">Why I Love You</h2>
+    <p class="reasons-sub">tap a card to flip it</p>
+    <div class="card-grid" id="card-grid"></div>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="page music-page" id="page-music">
+    <div class="paper-card player">
+      <div class="record-wrap">
+        <div class="vinyl" id="vinyl">
+          <div class="vinyl-label">our<br>song</div>
+        </div>
+      </div>
+      <p class="music-caption" id="music-caption">sung a little off-key, just for you</p>
+
+      <div class="transport">
+        <button id="play-btn" aria-label="Play">▶</button>
+      </div>
+      <div class="progress-row">
+        <span id="cur-time">0:00</span>
+        <input type="range" id="seek" min="0" max="100" value="0" aria-label="Seek">
+        <span id="dur-time">0:00</span>
+      </div>
+
+      <audio id="audio" preload="metadata"></audio>
+      <div class="audio-fallback" id="audio-fallback">
+        No recording added yet. Drop your voice memo into the same folder as this file and name it
+        <code id="fallback-filename">our-song.mp3</code>, or update <code>CONFIG.audioSrc</code> near the
+        bottom of the file to point at it.
+      </div>
+    </div>
+  </section>
+
+  <footer>made with love, for you 🤍</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
