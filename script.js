@@ -34,11 +34,11 @@ Happy birthday. I love you more than I know how to put into words, but I'll keep
     { front: "Growing with you", back: "I love who I am becoming, and I know it's because you're right here beside me." }
   ],
 
-  musicCaption: "sung a little off-key, just for you",
+  musicCaption: "sung a little off-key, just for you. Please pag earphones haha", 
 
   // Put your recorded voice file next to this HTML file and set the filename here.
   // Supported: mp3, m4a, wav, ogg. Example: "our-song.mp3"
-  audioSrc: "our-song.mp3"
+  audioSrc: "song.mp3"
 };
 
 /* ============================================================
